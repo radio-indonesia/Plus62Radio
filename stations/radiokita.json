@@ -1,0 +1,7 @@
+{
+	"name": "Radio Kita FM Cirebon",
+	"url": "https://api.webrad.io/data/streams/57/kita-cirebon",
+	"logo": "https://i.imgur.com/GfzcWe6.png",
+	"description": "STATION_RADIOKITA_DESCRIPTION",
+	"emoji": "📻"
+}

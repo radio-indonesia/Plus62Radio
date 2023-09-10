@@ -33,7 +33,7 @@ export class PresenceManager {
 	public async setUpdateInterval(interval: number = 5_000) {
 		for (let i = 0; i < this._presences.length; i++) {
 			const name = await this.translate(this._presences[i])
-			this.update('dnd', { name, type: ActivityType.Listening })
+			this.update('idle', { name, type: ActivityType.Listening })
 
 			if (i === this._presences.length - 1) i = 0
 			await sleep(interval)

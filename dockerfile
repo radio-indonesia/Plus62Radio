@@ -1,5 +1,5 @@
-# Use an official Node.js runtime as the base image for building
-FROM node:18 AS build
+# Get ready for production
+FROM ghcr.io/hazmi35/node:18-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -18,6 +18,9 @@ RUN yarn add typescript
 
 # Build your application
 RUN yarn build
+
+# Install ffmpeg
+RUN apk add --no-cache ffmpeg
 
 # Expose the port your application will run on (adjust as needed)
 # EXPOSE 3000

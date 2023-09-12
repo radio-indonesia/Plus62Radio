@@ -18,12 +18,12 @@
 		"allowSyntheticDefaultImports": true,
 
 		// Emit
-		"inlineSources": true,
+		"inlineSources": false,
 		"newLine": "lf",
 		"noEmitHelpers": true,
 		"outDir": "dist",
 		"removeComments": false,
-		"sourceMap": true,
+		"sourceMap": false,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 

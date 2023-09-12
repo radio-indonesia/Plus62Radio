@@ -21,7 +21,7 @@ export const createCommand = (client: Lrmn) => {
 			const queue = client.radio.queues.get(interaction.guildId!)
 			const station = client.radio.resolveStation(stationURL)
 
-			await interaction.deferReply()
+			await interaction.deferReply() // Ini benar, karena Anda ingin memberikan respons yang tertunda.
 
 			if (!station) {
 				const warningMessage = translate('CHANGE_COMMAND_WARNING_INVALID_STATION')

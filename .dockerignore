@@ -10,3 +10,5 @@ yarn-error.log
 .dockerignore
 Dockerfile
 README.md
+.yarn
+.yarnrc.yml

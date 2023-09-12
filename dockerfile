@@ -1,29 +1,27 @@
-# Get ready for production
-FROM ghcr.io/hazmi35/node:18-alpine
+# Gunakan image Node.js LTS sebagai dasar
+FROM node:18-slim
 
-# Set the working directory inside the container
+# Install python3
+RUN apt-get update && apt-get install -y python3 make g++ --fix-missing
+
+
+# Setel direktori kerja di dalam kontainer
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files to the working directory
+# Salin berkas package.json dan package-lock.json ke direktori kerja
 COPY package*.json ./
 
-# Install the project dependencies
-RUN yarn install
+# Instal dependensi Node.js
+RUN npm install
 
-# Copy the rest of the application code to the working directory
+# Salin sumber kode aplikasi ke direktori kerja
 COPY . .
 
-# Use yarn to add TypeScript to the project
-RUN yarn add typescript
+# Build proyek TypeScript
+RUN npm run build
 
-# Build your application
-RUN yarn build
+# Instal ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg
 
-# Install ffmpeg
-RUN apk add --no-cache ffmpeg
-
-# Expose the port your application will run on (adjust as needed)
-# EXPOSE 3000
-
-# Command to start your application
+# Tentukan perintah untuk menjalankan aplikasi Anda
 CMD ["node", "dist/sharding.js"]

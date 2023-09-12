@@ -10,6 +10,7 @@ export const createCommand = (client: Lrmn) => {
 			const queue = client.radio.queues.get(interaction.guild!.id)
 			const station = client.radio.resolveStation(settings.stationURL!)
 
+			// Menggunakan deferReply untuk menunda respons awal
 			await interaction.deferReply()
 
 			if (!station) {
@@ -38,6 +39,7 @@ export const createCommand = (client: Lrmn) => {
 				'{TRACK}': trackTitle
 			})
 
+			// Menggunakan followUp untuk mengirim respons tambahan
 			return interaction.followUp({ embeds: [{ color: 0x39ff84, description, thumbnail: { url: station.logo } }] })
 		}
 	} as ICommand

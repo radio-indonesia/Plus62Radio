@@ -1,14 +1,15 @@
 {
-	"name": "radiobox",
+	"name": "plus62radio",
+	"version": "2.0.0",
 	"description": "A simple radio bot for Discord written in Typescript",
-	"homepage": "https://github.com/Radio-Indonesia/Radio-Box",
+	"homepage": "https://github.com/radio-indonesia/Plus62Radio",
 	"author": "lrmn <lrmn.is-a.dev>",
 	"bugs": {
-		"url": "https://github.com/Radio-Indonesia/Radio-Box/issues"
+		"url": "https://github.com/radio-indonesia/Plus62Radio/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Radio-Indonesia/Radio-Box.git"
+		"url": "https://github.com/radio-indonesia/Plus62Radio.git"
 	},
 	"keywords": [
 		"discord",

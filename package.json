@@ -24,7 +24,8 @@
 		"start:build": "yarn build && yarn start",
 		"update": "yarn upgrade-interactive",
 		"prepare": "is-ci || husky install",
-		"build": "tsc"
+		"build": "tsc",
+		"deploy": "cross-env NODE_ENV=development tsx watch src/deploy.ts"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.7.1",

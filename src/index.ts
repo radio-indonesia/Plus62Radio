@@ -46,11 +46,11 @@ process.on('uncaughtException', async error => repair(error))
 process.on('unhandledRejection', async error => repair(error))
 
 // Tambahkan fungsi untuk reload perintah slash
+// Tambahkan fungsi untuk reload perintah slash
 async function reloadSlashCommands() {
 	try {
 		// Di sini Anda dapat menambahkan logika khusus Anda untuk mendaftarkan ulang perintah slash
 		// Pastikan Anda telah mengimplementasi metode reloadSlashCommands pada Lrmn
-		await reloadSlashCommands() // This line will cause a recursive call, potentially leading to a stack overflow.
 		console.log('Reloaded Slash Commands successfully.')
 	} catch (error) {
 		console.error('Failed to reload Slash Commands:', error)

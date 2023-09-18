@@ -1,19 +1,19 @@
 <div style="text-align:center"> 
-    <img src="assets/logo.svg" />
+    <img src="assets/og-62radio.png" />
 </div>
 
 <p align="center" >
-    <a href="https://discord.com/api/oauth2/authorize?client_id=774329375206277122&permissions=2150909952&scope=bot%20applications.commands">
+    <a href="https://discord.com/oauth2/authorize?client_id=1090120136167538748&permissions=551940254784&redirect_uri=https%3A%2F%2F62radio.is-a.fun%2Fthankyou&response_type=code&scope=guilds.join%20bot%20applications.commands">
         <img src="https://img.shields.io/badge/Undang-Discord-7289da?style=flat&logo=discord&logoColor=white"/>
     </a>
-    <a href="https://discord.gg/XmqkJRmcty">
+    <a href="https://discord.gg/WFfjrQxnfH">
         <img src="https://img.shields.io/badge/Dukungan-Discord-7289da?style=flat&logo=discord&logoColor=white" />
     </a>
 </p>
 
-## Overview
+📻 +62 Radio adalah teman sempurna untuk server Discord Anda, membawa hiburan musik dan hiburan yang menyenangkan ke komunitas Anda.
 
-Lrmn adalah bot radio sederhana untuk Discord. Jika Anda penggemar mendengarkan musik, dan Anda bosan dengan daftar putar Anda, maka Lrmn adalah solusi terbaik untuk Anda dan anggota server Anda.
+> +62 Radio? Radio nya indonesia
 
 [Pemasangan](#pemasangan) tidak memakan waktu lama jika Anda mengikuti petunjuknya. Hanya beberapa klik, dan bot sudah ada di server Anda di saluran yang tepat, disetel ke frekuensi yang tepat, dan memainkan musik keren.
 
@@ -38,7 +38,7 @@ Sebelum memulai instalasi, pastikan Anda memiliki alat berikut terinstal:
 Pertama, Anda perlu mengklon repository bot dengan perintah berikut:
 
 ```bash
-git clone https://github.com/Noktomezo/Lrmn-discord-bot.git
+git clone https://github.com/radio-indonesia/Plus62Radio.git
 ```
 
 Then you need to install all dependencies:

@@ -1,27 +1,28 @@
 # Gunakan image Node.js LTS sebagai dasar
-FROM node:18-slim
+FROM node:18.7.0-slim AS base
 
-# Install python3
-RUN apt-get update && apt-get install -y python3 make g++ --fix-missing
+# Install ffmpeg
+RUN apt-get update && \
+    apt-get install -y ffmpeg tini libssl-dev ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
+# Install dependencies
+FROM base AS dependencies
 
-# Setel direktori kerja di dalam kontainer
-WORKDIR /app
+WORKDIR /usr/app
 
 # Salin berkas package.json dan package-lock.json ke direktori kerja
-COPY package*.json ./
+COPY package*.json .
+COPY yarn.lock .
 
-# Instal dependensi Node.js
-RUN npm install
+# Instal dependensi Node.js dengan Yarn
+RUN yarn install
 
 # Salin sumber kode aplikasi ke direktori kerja
 COPY . .
 
 # Build proyek TypeScript
-RUN npm run build
-
-# Instal ffmpeg
-RUN apt-get update && apt-get install -y ffmpeg
+RUN yarn build
 
 # Tentukan perintah untuk menjalankan aplikasi Anda
 CMD ["node", "dist/sharding.js"]

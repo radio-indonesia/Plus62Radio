@@ -24,7 +24,7 @@ export class LocaleManager extends TypedEmitter<ILocaleManagerEvents> {
 	public constructor(
 		public client: Lrmn,
 		public folder: string,
-		public defaultLocale: TLocaleCode = 'id'
+		public defaultLocale: TLocaleCode = 'en-US'
 	) {
 		super()
 		this._locales = new Collection<TLocaleCode, TLocaleMap>()
@@ -51,7 +51,7 @@ export class LocaleManager extends TypedEmitter<ILocaleManagerEvents> {
 
 	public resolveCode(resolvable?: TLocaleResolvable): TLocaleCode {
 		const locale = this.resolve(resolvable)
-		return this._locales.findKey(v => v === locale) ?? 'id'
+		return this._locales.findKey(v => v === locale) ?? 'en-US'
 	}
 
 	public translate(localeLike: TLocaleResolvable, translatable: string, replaceable: Record<string, string> = {}) {

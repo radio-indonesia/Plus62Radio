@@ -31,11 +31,11 @@ export class CommandManager {
 		})
 	}
 
-	public get(commandName: string, localeCode: TLocaleCode = 'id') {
+	public get(commandName: string, localeCode: TLocaleCode = 'en-US') {
 		return this._localized.get(localeCode)!.get(commandName) as ICommand
 	}
 
-	public getAll(localeCode: TLocaleCode = 'id') {
+	public getAll(localeCode: TLocaleCode = 'en-US') {
 		return this._localized.get(localeCode)!.clone()
 	}
 

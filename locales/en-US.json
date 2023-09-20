@@ -76,5 +76,7 @@
 
 	"COMMAND_GROUP_ADMIN": "Admin",
 	"COMMAND_GROUP_INFO": "Information",
-	"COMMAND_GROUP_RADIO": "Radio"
+	"COMMAND_GROUP_RADIO": "Radio",
+
+	"COMMAND_NOT_FOUND": "An unexpected error occurred while switching the radio, try again later"
 }

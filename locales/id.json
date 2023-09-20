@@ -76,5 +76,7 @@
 
 	"COMMAND_GROUP_ADMIN": "Admin",
 	"COMMAND_GROUP_INFO": "Informasi",
-	"COMMAND_GROUP_RADIO": "Radio"
+	"COMMAND_GROUP_RADIO": "Radio",
+
+	"COMMAND_NOT_FOUND": "Terjadi kesalahan yang tidak terduga, coba lagi nanti"
 }
